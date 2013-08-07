@@ -1,4 +1,4 @@
-package com.oopPlayground.tdd;
+package com.oopPlayground.tdd.FXCalculator;
 
 public class ExchangeRate {
     public int getConversionRate(String sourceCurrency, String destinationCurrency) {
