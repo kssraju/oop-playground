@@ -1,8 +1,5 @@
 package com.oopPlayground.tdd.FXCalculator;
 
-import com.oopPlayground.tdd.FXCalculator.ExchangeRate;
-import com.oopPlayground.tdd.FXCalculator.FxCalculator;
-import com.oopPlayground.tdd.FXCalculator.RateStorage;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
