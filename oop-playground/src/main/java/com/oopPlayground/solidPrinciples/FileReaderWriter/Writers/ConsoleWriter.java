@@ -1,4 +1,4 @@
-package com.oopPlayground.solidPrinciple.FileReaderWriter.Writers;
+package com.oopPlayground.solidPrinciples.FileReaderWriter.Writers;
 
 import java.io.PrintStream;
 import java.io.PrintWriter;

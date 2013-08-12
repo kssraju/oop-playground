@@ -1,7 +1,7 @@
-package com.oopPlayground.solidPrinciple.FileReaderWriter;
+package com.oopPlayground.solidPrinciples.FileReaderWriter;
 
-import com.oopPlayground.solidPrinciple.FileReaderWriter.Readers.IReader;
-import com.oopPlayground.solidPrinciple.FileReaderWriter.Writers.IWriter;
+import com.oopPlayground.solidPrinciples.FileReaderWriter.Readers.IReader;
+import com.oopPlayground.solidPrinciples.FileReaderWriter.Writers.IWriter;
 
 import java.util.List;
 

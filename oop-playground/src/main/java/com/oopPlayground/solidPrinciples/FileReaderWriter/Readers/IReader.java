@@ -1,4 +1,4 @@
-package com.oopPlayground.solidPrinciple.FileReaderWriter.Readers;
+package com.oopPlayground.solidPrinciples.FileReaderWriter.Readers;
 
 import java.io.Reader;
 import java.util.List;
