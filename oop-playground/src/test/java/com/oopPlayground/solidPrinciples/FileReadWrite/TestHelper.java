@@ -9,7 +9,12 @@ import java.io.IOException;
 public class TestHelper {
     public void createTestFile(String filePath, String contents) {
         try {
-            FileWriter writer = new FileWriter(filePath);
+            File file = new File(filePath);
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+
+            FileWriter writer = new FileWriter(file.getAbsoluteFile());
             BufferedWriter bufferedWriter = new BufferedWriter(writer);
             bufferedWriter.write(contents);
 
