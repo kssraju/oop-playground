@@ -5,21 +5,19 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class MathsWorksSpec {
 
     private MathsWorks mathsWorks;
-    private INumberIdentifier evenIdentifier;
-    private INumberIdentifier primeIdentifier;
-    private INumberIdentifier multiplesOfNumberIdentifier;
+    private INumberFilter evenIdentifier;
+    private INumberFilter primeIdentifier;
+    private INumberFilter multiplesOfNumberIdentifier;
 
     @Before
     public void setup() {
-        evenIdentifier = new EvenNumberIdentifier();
-        primeIdentifier = new PrimeNumberIdentifier();
+        evenIdentifier = new EvenNumberFilter();
+        primeIdentifier = new PrimeNumberFilter();
     }
 
     @Test
@@ -44,7 +42,7 @@ public class MathsWorksSpec {
 
     @Test
     public void shouldIdentifyEvenPrimes() {
-        INumberIdentifier evenPrimeIdentifier = new CompositeNumberIdentifier(Arrays.asList(evenIdentifier, primeIdentifier));
+        INumberFilter evenPrimeIdentifier = new CompositeNumberFilter(Arrays.asList(evenIdentifier, primeIdentifier));
         mathsWorks = new MathsWorks(evenPrimeIdentifier);
         List<Integer> expected = Arrays.asList(2);
 
@@ -55,7 +53,7 @@ public class MathsWorksSpec {
 
     @Test
     public void shouldIdentifyMultiplesOfFive() {
-        multiplesOfNumberIdentifier = new MultiplesOfNumberIdentifier(5);
+        multiplesOfNumberIdentifier = new MultiplesOfNumberFilter(5);
         mathsWorks = new MathsWorks(multiplesOfNumberIdentifier);
         List<Integer> expected = Arrays.asList(5, 10);
 
@@ -66,8 +64,8 @@ public class MathsWorksSpec {
 
     @Test
     public void shouldIdentifyEvenMultiplesOfFive() {
-        multiplesOfNumberIdentifier = new MultiplesOfNumberIdentifier(5);
-        INumberIdentifier evenMultiplesOfFiveIdentifier = new CompositeNumberIdentifier(Arrays.asList(evenIdentifier, multiplesOfNumberIdentifier));
+        multiplesOfNumberIdentifier = new MultiplesOfNumberFilter(5);
+        INumberFilter evenMultiplesOfFiveIdentifier = new CompositeNumberFilter(Arrays.asList(evenIdentifier, multiplesOfNumberIdentifier));
         mathsWorks = new MathsWorks(evenMultiplesOfFiveIdentifier);
         List<Integer> expected = Arrays.asList(10);
 

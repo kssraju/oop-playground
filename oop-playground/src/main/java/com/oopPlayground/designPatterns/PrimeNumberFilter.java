@@ -4,13 +4,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class PrimeNumberIdentifier implements INumberIdentifier {
+public class PrimeNumberFilter implements INumberFilter {
 
-    public List<Integer> identify(int from, int to, int count) {
-        return identify(from, to).subList(0, count);
+    public List<Integer> filter(int from, int to, int count) {
+        return filter(from, to).subList(0, count);
     }
 
-    public List<Integer> identify(int from, int to) {
+    public List<Integer> filter(int from, int to) {
         List<Integer> primeNumbers = new ArrayList<>();
         createPrimeSieve(to);
         for (int i = from; i < to; i++) {
@@ -21,11 +21,11 @@ public class PrimeNumberIdentifier implements INumberIdentifier {
         return primeNumbers;
     }
 
-    public List<Integer> identify(List<Integer> numbers, int count) {
-        return identify(numbers).subList(0, count);
+    public List<Integer> filter(List<Integer> numbers, int count) {
+        return filter(numbers).subList(0, count);
     }
 
-    public List<Integer> identify(List<Integer> numbers) {
+    public List<Integer> filter(List<Integer> numbers) {
         List<Integer> primeNumbers = new ArrayList<>();
         for (int number : numbers) {
             if (isPrime(number)) {
@@ -35,7 +35,7 @@ public class PrimeNumberIdentifier implements INumberIdentifier {
         return primeNumbers;
     }
 
-    public boolean isIdentified(int number) {
+    public boolean isFiltered(int number) {
         return isPrime(number);
     }
 
