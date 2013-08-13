@@ -1,4 +1,4 @@
-package com.oopPlayground.designPatterns;
+package com.oopPlayground.designPatterns.MathsWorks;
 
 import java.util.ArrayList;
 import java.util.List;

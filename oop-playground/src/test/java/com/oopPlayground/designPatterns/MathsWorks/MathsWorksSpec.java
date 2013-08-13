@@ -1,5 +1,6 @@
-package com.oopPlayground.designPatterns;
+package com.oopPlayground.designPatterns.MathsWorks;
 
+import com.oopPlayground.designPatterns.MathsWorks.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

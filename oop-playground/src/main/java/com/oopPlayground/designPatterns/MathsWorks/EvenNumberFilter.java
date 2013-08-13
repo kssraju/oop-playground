@@ -1,4 +1,4 @@
-package com.oopPlayground.designPatterns;
+package com.oopPlayground.designPatterns.MathsWorks;
 
 public class EvenNumberFilter extends MultiplesOfNumberFilter {
     public EvenNumberFilter() {
