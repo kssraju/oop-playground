@@ -1,4 +1,4 @@
-package com.oopPlayground.designPatterns.WeatherControlSystem;
+package com.oopPlayground.designPatterns.ObserverPattern;
 
 public interface IObservable<T extends State> {
     public void addObserver(IObserver<T> observer);

@@ -1,5 +1,8 @@
 package com.oopPlayground.designPatterns.WeatherControlSystem;
 
+import com.oopPlayground.designPatterns.ObserverPattern.IObserver;
+import com.oopPlayground.designPatterns.ObserverPattern.Observable;
+
 public class WeatherControlSystem extends Observable<Weather> {
 
     private Weather weather;

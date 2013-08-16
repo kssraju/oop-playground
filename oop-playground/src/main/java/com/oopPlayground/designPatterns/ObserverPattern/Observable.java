@@ -1,4 +1,4 @@
-package com.oopPlayground.designPatterns.WeatherControlSystem;
+package com.oopPlayground.designPatterns.ObserverPattern;
 
 import java.util.ArrayList;
 import java.util.List;

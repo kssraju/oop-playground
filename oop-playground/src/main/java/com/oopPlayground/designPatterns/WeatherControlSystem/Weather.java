@@ -1,5 +1,7 @@
 package com.oopPlayground.designPatterns.WeatherControlSystem;
 
+import com.oopPlayground.designPatterns.ObserverPattern.State;
+
 public class Weather extends State {
     private double temp;
     private double humidity;

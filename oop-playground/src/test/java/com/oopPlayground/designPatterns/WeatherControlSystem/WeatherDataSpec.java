@@ -34,7 +34,7 @@ public class WeatherDataSpec {
 
     @Test
     public void shouldAddANewDisplay() {
-        IObserver currentDisplay = mock(IObserver.class);
+        WeatherDisplayObserver currentDisplay = mock(WeatherDisplayObserver.class);
         weatherControlSystem.addObserver(currentDisplay);
         weatherControlSystem.setMeasurements(weather);
 
@@ -45,7 +45,7 @@ public class WeatherDataSpec {
 
     @Test
     public void shouldRemoveAnExistingDisplay() {
-        IObserver currentDisplay = mock(IObserver.class);
+        WeatherDisplayObserver currentDisplay = mock(WeatherDisplayObserver.class);
         weatherControlSystem.addObserver(currentDisplay);
         weatherControlSystem.setMeasurements(weather);
         weatherControlSystem.removeObservers(currentDisplay);
@@ -57,8 +57,8 @@ public class WeatherDataSpec {
 
     @Test
     public void shouldDisplayWeatherChangesToBothDisplays() {
-        IObserver currentDisplay = mock(CurrentWeatherDisplay.class);
-        IObserver dailyStatisticsDisplay = mock(DailyStatisticsDisplay.class);
+        WeatherDisplayObserver currentDisplay = mock(CurrentWeatherDisplay.class);
+        WeatherDisplayObserver dailyStatisticsDisplay = mock(DailyStatisticsDisplay.class);
         weatherControlSystem.addObserver(currentDisplay);
         weatherControlSystem.addObserver(dailyStatisticsDisplay);
 
@@ -72,8 +72,8 @@ public class WeatherDataSpec {
 
     @Test
     public void shouldDisplayAndLogWeatherChanges() {
-        IObserver displayObserver = mock(WeatherDisplayObserver.class);
-        IObserver loggerObserver = mock(WeatherLoggerObserver.class);
+        WeatherDisplayObserver displayObserver = mock(WeatherDisplayObserver.class);
+        WeatherLoggerObserver loggerObserver = mock(WeatherLoggerObserver.class);
         weatherControlSystem.addObserver(displayObserver);
         weatherControlSystem.addObserver(loggerObserver);
 
