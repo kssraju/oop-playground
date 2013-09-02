@@ -1,4 +1,4 @@
-package com.oopPlayground.CodeJam.GoldHunt;
+package com.oopPlayground.codejam.GoldHunt;
 
 public class DisplacementValues {
     private int x;

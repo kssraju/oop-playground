@@ -1,4 +1,4 @@
-package com.oopPlayground.CodeJam.GoldHunt;
+package com.oopPlayground.codejam.GoldHunt;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,11 +32,11 @@ public class Hunt {
         for (Player player : players) {
             Cell cell = board.getCell(player.getCurrentXCoordinate(), player.getCurrentYCoordinate());
             //Gold
-            if (cell.getType().equals("Gold")) {
+            if (cell.getType().equalsIgnoreCase("Gold")) {
                 return player;
             }
             //Trap
-            else if (cell.getType().equals("Trap")) {
+            else if (cell.getType().equalsIgnoreCase("Trap")) {
                 trappedPlayers.add(player);
             }
             //Displacement
@@ -49,8 +49,7 @@ public class Hunt {
         if (players.size() == 0) {
             return null;
         }
-        move();
-        return null;
+        return move();
     }
 
     private void removeInactivePlayers(List<Player> trappedPlayers) {
